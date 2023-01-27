@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <script src="quotes.js"></script>
+</head>
+<body>
+    <button type="button" class="btn btn-success" id="chooser">Get!</button>
+    <p id="quote"></p>
+</body>
+<script>
+    document.getElementById('chooser').addEventListener('click', () => {
+    
+        const quotes = data;
+        const indexes = Object.keys(quotes);
+        const indexQuoteChosen = Math.floor(Math.random() * indexes.length) + 1;
+
+        document.getElementById('quote').innerText = `${indexQuoteChosen}: ${quotes[indexQuoteChosen]}`;
+    });
+</script>
+</html>
